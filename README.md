@@ -31,6 +31,8 @@ It is used to solve the linear symbolic systems and get PUR.
  
 ##Note on the normal set assumption
 
+Our algorithm works correctly for ideals where the normal set (basis of the quotient ring) either contains all variables or is missing exactly one variable. In both cases, the corresponding univariate representations for all variables, including the one missing from the normal set, are fully computed and output.
+
 Our algorithm works correctly for ideals where the normal set (basis of the quotient ring) either contains all variables or is missing exactly one variable. In both cases, the corresponding univariate representations for all variables, including the one missing from the normal set, are fully computed and output. This covers many well-known benchmark ideals, such as cyclic 3, cyclic 5, which often have one variable missing from the normal set under graded reverse lexicographic order.  If two or more variables are missing from the normal set, the algorithm will still output correct representations for all variables present in the normal set, but will omit the corresponding polynomials for the missing variables. The algorithm is not designed to handle such cases, and the representations for the missing variables are not guaranteed to be computed correctly. Users are encouraged to verify that their ideal meets the above assumptions before use.
 
 ##Comparison with Related Work
